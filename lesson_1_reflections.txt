@@ -1,0 +1,43 @@
+How did viewing a diff between two versions of a file help you see the bug that was introduced?
+I could focus only in the lines that I changed
+
+
+I don't have to spend time making and controling this history
+
+
+What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google docs does?
+Pros: You decide the moment to do it
+      You know the state of you project
+Cons: You can forget to commig
+
+Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
+
+Multiple files commit is necessary when the files depends each other
+One files commit is for files that are independent
+
+How can you use the commands git log and git diff to view the history of files?
+Git log lists the commits doing with its identification, author and date
+Git diff takes the identifications of the commits that need to be compared
+It is important to remember that the first commit in the log is the last one and the first parameter in the diff method is the old repository
+
+How might using version control make you more confident to make changes that could break something?
+I will commit before initiate a change
+
+Now that you have your workspace set up, what do you want to try using Git for?
+My workspace is not set up
+# Enable tab completion
+source ~/git-completion.bash
+
+# colors!
+green="\[\033[0;32m\]"
+blue="\[\033[0;34m\]"
+purple="\[\033[0;35m\]"
+reset="\[\033[0m\]"
+
+# Change command prompt
+source ~/git-prompt.sh
+export GIT_PS1_SHOWDIRTYSTATE=1
+# '\u' adds the name of the current user to the prompt
+# '\$(__git_ps1)' adds git-related stuff
+# '\W' adds the name of the current directory
+export PS1="$purple\u$green\$(__git_ps1)$blue \W $ $reset"
